@@ -7,15 +7,15 @@ import org.neo4j.ogm.annotation.NodeEntity;
 import org.springframework.data.neo4j.core.schema.*;
 
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
 @NodeEntity
-public class User {
+public class Mobile {
     @Id
     @GeneratedValue
     private Long id;
-    private String name;
-    private String email;
-    @Relationship(type = "HAS_MOBILE")
-    private Mobile mobilePhone;
+    private String brandName;
+    private String model;
+    private String color;
+    private int storage;
 }
