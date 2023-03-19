@@ -6,18 +6,14 @@ import lombok.NoArgsConstructor;
 import org.neo4j.ogm.annotation.NodeEntity;
 import org.springframework.data.neo4j.core.schema.*;
 
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @NodeEntity
-public class Mobile {
+public class Processor {
     @Id
     @GeneratedValue
     private Long id;
-    private String brandName;
-    private String model;
-    private String color;
-    private int storage;
-    @Relationship(type = "HAS_PROCESSOR")
-    private Processor processor;
+    private String brand;
 }
