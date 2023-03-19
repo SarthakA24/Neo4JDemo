@@ -12,4 +12,5 @@ public interface UserRepository extends Neo4jRepository<User, Long> {
     User findByEmail(String email);
 //    @Query("MATCH (u:User)-[:HAS_MOBILE]->(m:Mobile) WHERE m.brandName = $brandName RETURN u")
     User findByMobilePhone_BrandName(String brandName);
+    User findByMobilePhone_Processor_brand(String processorBrandName);
 }

@@ -7,4 +7,5 @@ public interface UserService {
     User findByEmail(String email);
     User saveUser(User user);
     User findByMobileBrand(String brandName);
+    User findByProcessorBrandName(String processorBrandName);
 }

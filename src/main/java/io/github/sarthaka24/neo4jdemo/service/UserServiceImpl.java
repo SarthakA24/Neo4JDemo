@@ -33,4 +33,9 @@ public class UserServiceImpl implements UserService{
     public User findByMobileBrand(String brandName) {
         return this.userRepository.findByMobilePhone_BrandName(brandName);
     }
+
+    @Override
+    public User findByProcessorBrandName(String processorBrandName) {
+        return this.userRepository.findByMobilePhone_Processor_brand(processorBrandName);
+    }
 }

@@ -36,4 +36,9 @@ public class UserController {
     public ResponseEntity<?> findUserByMobileBrand(@PathVariable("brandName") String brandName) {
         return new ResponseEntity<>(this.userService.findByMobileBrand(brandName), HttpStatus.OK);
     }
+
+    @GetMapping("find/processor/{processorBrandName}")
+    public ResponseEntity<?> findUserByProcessorBrandName(@PathVariable("processorBrandName") String processorBrandName) {
+        return new ResponseEntity<>(this.userService.findByProcessorBrandName(processorBrandName), HttpStatus.OK);
+    }
 }
