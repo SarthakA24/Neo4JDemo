@@ -28,4 +28,9 @@ public class UserServiceImpl implements UserService{
     public User saveUser(User user) {
         return this.userRepository.save(user);
     }
+
+    @Override
+    public User findByMobileBrand(String brandName) {
+        return this.userRepository.findByMobilePhone_BrandName(brandName);
+    }
 }
